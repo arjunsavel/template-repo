@@ -1,8 +1,7 @@
 # testing-tutorial
 language: python
 python:
-  - "3.5"
-  - "3.6"      # current default Python on Travis CI
+  - "3.6"      # try adding other python versions!
 # command to install dependencies
 install:
   - pip install -r requirements.txt
@@ -10,5 +9,5 @@ install:
 # command to run tests
 script:
   - coverage run -m unittest discover
-after_success:
-  - bash <(curl -s https://codecov.io/bash) -t 75efed13-e090-4cf9-8a07-499161b2f634
+# after_success:
+#   - bash <(curl -s https://codecov.io/bash) -t YOUR_TOKEN_HERE
