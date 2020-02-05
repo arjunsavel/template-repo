@@ -1,2 +1,7 @@
 # testing-tutorial
-# INSERT CODE HERE
+coverage:
+  precision: 2
+  round: nearest
+  range: "40...90"
+  ignore:
+    - "__init__.py"
