@@ -10,6 +10,12 @@ Welcome to template-repo's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+.. toctree::
+   :maxdepth: 2
+   :caption: Documentation
+
+   documentation
+
 
 
 Indices and tables
