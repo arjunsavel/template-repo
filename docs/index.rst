@@ -1,5 +1,5 @@
 .. template-repo documentation master file, created by
-   sphinx-quickstart on Mon Jun  1 00:46:24 2020.
+   sphinx-quickstart on Mon Jun  1 00:55:02 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
