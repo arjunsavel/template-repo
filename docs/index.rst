@@ -9,6 +9,12 @@ Welcome to template-repo's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: For developers
+   
+   versioning
 
 .. toctree::
    :maxdepth: 2
