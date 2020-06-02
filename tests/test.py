@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from fit_line import *
+from src.template.fit_line import *
 
 class TestFuncs(unittest.TestCase):
 
