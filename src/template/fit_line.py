@@ -2,8 +2,9 @@ import numpy as np
 
 from scipy.optimize import curve_fit
 
+
 def exp_func(x, a, b, c):
-	"""
+    """
 	An exponential function.
 
 	
@@ -18,11 +19,12 @@ def exp_func(x, a, b, c):
 		y : (1D array) The exponentiated function. Same length as x.
 
 	"""
-	y = a * np.exp(-b * x) + c
-	return y
+    y = a * np.exp(-b * x) + c
+    return y
+
 
 def fit_line(xdata, ydata, func):
-	"""
+    """
 	Fits a line given data.
 
 	Inputs:
@@ -38,7 +40,6 @@ def fit_line(xdata, ydata, func):
 		popt : (1D array) best-fit parameters for func.
 
 	"""
-	popt, pcov = curve_fit(func, xdata, ydata)
-	fit_y = func(xdata, *popt)
-	return fit_y, popt
-
+    popt, pcov = curve_fit(func, xdata, ydata)
+    fit_y = func(xdata, *popt)
+    return fit_y, popt
