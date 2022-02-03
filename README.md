@@ -1,5 +1,5 @@
 # template-repo
-[![Tests](https://github.com/arjunsavel/template-repo/actions/workflows/python-app.yml/badge.svg)](https://github.com/arjunsavel/template-repo/actions/workflows/python-app.yml)
+[![Run tests](https://github.com/arjunsavel/template-repo/actions/workflows/python-app.yml/badge.svg)](https://github.com/arjunsavel/template-repo/actions/workflows/python-app.yml)
 
 
 Leaning how to use:
