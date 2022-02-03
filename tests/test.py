@@ -1,5 +1,10 @@
+"""
+Sample test file illustrating the basics.
+
+author: @arjunsavel
+"""
+
 import unittest
-import numpy as np
 from src.template.fit_line import *
 
 class TestFuncs(unittest.TestCase):
@@ -19,18 +24,15 @@ class TestFuncs(unittest.TestCase):
 		# self.assertNotIsInstance(A, B) # asserts that A is not an instance of B
 		# self.assertRaises(A) # asserts that error A is raised
 
-	def test_exponential_e(self):
-		x = 0
-		a = 1
-		b = 1
-		c = 0
-		result = exp_func(x, a, b, c)
+	def test_exponential_base_1_power_2(self):
+		base = 1
+		power = 2
+		result = exp_func(base, power)
 		expected_result = 1
 		self.assertEqual(result, expected_result)
 
 
-
-# class TestFitting(unittest.TestCase):
-
-	# def test_fit_exponential(self):
-		# INSERT CODE HERE
+	def test_exponential_new(self):
+		#WRITE your test here!
+		#CHANGE the below assert statement
+		self.assertTrue(True)
