@@ -25,12 +25,12 @@ jobs:
         python3 -m unittest discover
         
     - name: Check files using the black formatter
-        uses: rickstaa/action-black@v1
-        id: action_black
-        with:
-          black_args: "."
+      uses: rickstaa/action-black@v1
+      id: action_black
+      with:
+        black_args: "."
         
     - name: Committing changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Added style
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Added style
