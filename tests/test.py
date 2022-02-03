@@ -1,5 +1,5 @@
 """
-Sample test file illustrating the basics.
+Sample file illustrating the basics of testing with Python.
 
 author: @arjunsavel
 """
