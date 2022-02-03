@@ -1,44 +1,66 @@
-import numpy as np
-from scipy.optimize import curve_fit
+"""
+Code that can be extended to fit a line.
 
+author: @arjunsavel
+"""
+import sys
 
-def exp_func(x, a, b, c):
+def exp_func(base, power):
     """
 	An exponential function.
 
 	
 	Inputs:
-		x : (1D array) x-values to be input into the exponential function.
-		a : (float) multiplicative factor for the exponential.
-		b : (float) multiplicative factor for the exponentiated x.
-		c : (float) additive factor for the exponential function.
+		:base: (float) The base of the exponent.
+		:power: (float) The power of the exponent.
 
 
 	Outputs:
-		y : (1D array) The exponentiated function. Same length as x.
+		:exponented: (float) The result of the exponent base^power.
 
 	"""
-    y = a * np.exp(-b * x) + c
-    return y
+    exponented = pow(base, power)
+    return exponented
 
 
-def fit_line(xdata, ydata, func):
-    """
-	Fits a line given data.
+# to call this as a script from command line with args
+if __name__ == '__main__':
+	def check_type(val):
+		"""
+		Checks whether an input is a float or integer.
 
-	Inputs:
-		xdata : (1D array) x-values of observed / provided data.
-		ydata : (1D array) y-values of observed / provided data.
-		func : (function) functional form of curve to be fit.
+		Inputs
+		------
+			:val: input to be checked.
+
+		Outputs
+		-------
+			:allowed: (bool) whether the input is an allowed type.
+		"""
+		allowed_types = [int, float]
+		try:
+			allowed = type(eval(val)) in allowed_types
+
+		# if there's a NameError, tried to evaluate a string that isn't a var
+		except NameError:
+			allowed = False
+
+		return allowed
 
 
-	Outputs:
-		fit_y : (1D array) y-values computed from applying fit
-						function to xdata. Same length as
-						xdata and ydata.
-		popt : (1D array) best-fit parameters for func.
 
-	"""
-    popt, pcov = curve_fit(func, xdata, ydata)
-    fit_y = func(xdata, *popt)
-    return fit_y, popt
+	# type check
+	arg1 = sys.argv[1]
+	arg2 = sys.argv[2]
+
+	
+
+	if not check_type(arg1) or not check_type(arg2):
+		raise ValueError('Make sure arguments are floats or integers!')
+
+	base = eval(sys.argv[1])
+	power = eval(sys.argv[2])
+
+	result = exp_func(base, power)
+	print(result)
+
